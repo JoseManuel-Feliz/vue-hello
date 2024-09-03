@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vue-hello</title>
+    <!-- BOOTSTRAP STYLESHEET -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css'
+        integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=='
+        crossorigin='anonymous' />
     <!-- VUE SCRIPT -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- SCRIPT JS -->
@@ -12,11 +16,16 @@
 </head>
 
 <body>
-    <header>
-        <h1 id="app">{{ message }}</h1>
+    <div id="app" class="wrapper text-center">
 
-    </header>
+        <header>
+            <h1 class="display-1 fw-semibold">{{ message }}</h1>
+        </header>
+        <main>
+            <div class="img-wrapper"> <img v-bind:src="imgUrl" alt="cute shy cat"></div>
+        </main>
 
+    </div>
 </body>
 
 </html>
